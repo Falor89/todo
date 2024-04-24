@@ -1,0 +1,30 @@
+.listItem {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background-color: #2f2d36;
+    border-radius: 20px;
+    padding-left: 5px;
+    height: 35px;
+}
+
+.title {
+    width: 90%;
+    font-size: 20px;
+    font-family: 'InformaPro Light';
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    justify-self: start;
+}
+
+.trash {
+    opacity: 1;
+    transition: opacity .9s ease;
+}
+
+.trash:hover {
+    opacity: .3;
+}

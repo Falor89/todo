@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #121315;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}

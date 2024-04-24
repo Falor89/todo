@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 720px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #18181c;
+    border-radius: 40px;
+    cursor: default;
+    transition: visibility 0.1s linear, opasity 0.1s linear;
+}
+
+.btnClose {
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 55px;
+    right: 35px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .3s ease-in;
+}
+
+.btnClose:hover {
+    opacity: 0.6;
+}
+
+.title {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'PremierLeague';
+    font-style: normal;
+    font-weight: normal;
+    margin: 50px auto 10px;
+}

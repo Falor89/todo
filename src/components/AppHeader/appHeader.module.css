@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    border-bottom: 1px solid #fff;
+}
+
+.text {
+    margin: 0;
+    padding: 20px 0 0 50px;
+    font-family: 'InformaPro Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5rem;
+    background: linear-gradient(to right, #fff 40%, #815ef8 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.secondText {}
