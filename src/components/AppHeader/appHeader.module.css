@@ -1,18 +1,45 @@
 .header {
     display: flex;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #EAF7FF;
+    height: 80px;
+    max-width: 1400px;
+    width: 1400px;
+    padding: 30px 0 0 100px;
 }
 
-.text {
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    height: 30px;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    text-decoration: none;
     margin: 0;
-    padding: 20px 0 0 50px;
-    font-family: 'InformaPro Bold';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 5rem;
-    background: linear-gradient(to right, #fff 40%, #815ef8 60%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    padding: 0;
 }
 
-.secondText {}
+.listItem {
+    text-decoration: none;
+    width: 66px;
+    height: 51px;
+}
+
+.listItem:hover {
+    border-bottom: 1px solid #44B1EF;
+    transition: border-bottom 1s;
+}
+
+.link {
+    font-weight: 900;
+    text-decoration: none;
+    color: #27507F
+}

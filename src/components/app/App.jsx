@@ -1,17 +1,23 @@
 import styles from './app.module.css'
 
 import AppHeader from '../AppHeader/AppHeader';
-import TodoContainer from '../TodoContainer/TodoContainer';
 import Modal from '../Modal/Modal';
+import { loadingTodos, loadTodos } from '../../services/actions/todos';
+
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(loadTodos())
+  }, [dispatch])
+
   return (
     <div className={styles.app}>
       <AppHeader />
-      <div className={styles.main}>
-        <TodoContainer />
-      </div>
     </div>
   );
 }

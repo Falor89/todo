@@ -1,8 +1,10 @@
 .app {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
-  background-color: #121315;
+  background-color: #fff;
+  font-family: 'Inter';
 }
 
 .main {
@@ -11,5 +13,5 @@
   justify-content: center;
   align-items: center;
   padding-top: 20px;
-  background-color: #121315
+
 }
