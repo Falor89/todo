@@ -1,0 +1,36 @@
+.taskInput {
+    width: 198px;
+    height: 34px;
+    border: none;
+    font-family: 'Inter';
+    font-weight: 700;
+    border-radius: 40px;
+    padding-left: 10px;
+    background-color: #EAF7FF;
+}
+
+.taskInputClose {
+    width: 198px;
+    height: 34px;
+    border: none;
+    font-family: 'Inter';
+    font-weight: 700;
+    border-radius: 40px;
+    padding-left: 10px;
+    background-color: #f08774;
+}
+
+.taskInputDone {
+    width: 198px;
+    height: 34px;
+    border: none;
+    font-family: 'Inter';
+    font-weight: 700;
+    border-radius: 40px;
+    padding-left: 10px;
+    background-color: #55CB61;
+}
+
+input {
+    outline: none;
+}

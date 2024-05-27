@@ -1,44 +1,90 @@
 import styles from './appHeader.module.css';
 
 import logo from '../../images/logo.png'
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { routes } from '../../utils/routes';
+import { useSelector } from 'react-redux';
 
 const AppHeader = () => {
+    const { authorization, user } = useSelector(store => store.user)
+    const location = useLocation().pathname
+
+    const [activeTab, setActiveTab] = useState({
+        home: true,
+        myList: false,
+        profile: false
+    })
+
+    useEffect(() => {
+        switch (location) {
+            case routes.home: setActiveTab({
+                home: true,
+                myList: false,
+                profile: false
+            })
+                break;
+            case routes.myList: setActiveTab({
+                home: false,
+                myList: true,
+                profile: false
+            })
+                break;
+            case routes.profile: setActiveTab({
+                home: false,
+                myList: false,
+                profile: true
+            })
+                break
+            default: setActiveTab({
+                home: false,
+                myList: false,
+                profile: false
+            })
+        }
+    }, [location])
+
+
     return (
         <header className={styles.header}>
             <nav className={styles.navigation}>
-                <img
-                    src={logo}
-                    alt="Логотип toDo"
-                    className={styles.logo}
-                />
+                <Link
+                    to={routes.home}
+                    className={styles.link}
+                >
+                    <img
+                        src={logo}
+                        alt="Логотип toDo"
+                        className={styles.logo}
+                    />
+                </Link>
                 <ul className={styles.navList}>
                     <li
-                        className={styles.listItem}
+                        className={activeTab.home ? styles.activeTab : styles.listItem}
                     >
                         <Link
                             to='/'
                             className={styles.link}
                         >
-                            All tasks
+                            Все задачи
                         </Link>
                     </li>
                     <li
-                        className={styles.listItem}
+                        className={activeTab.myList ? styles.activeTab : styles.listItem}
                     >
                         <Link
-                            to='/'
+                            to={routes.myList}
                             className={styles.link}
                         >
-                            My list
+                            Мои задачи
                         </Link>
                     </li>
                 </ul>
                 <Link
-                    to='/'
+                    to={routes.login}
                     className={styles.link}
                 >
-                    My account
+                    {authorization ? `${user.username}` : `Мой профиль`}
                 </Link>
             </nav>
         </header>

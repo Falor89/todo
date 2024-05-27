@@ -1,5 +1,3 @@
-const api = 'https://dummyjson.com/todos'
-
 const parseResponse = (res, message = '') => {
     return res.ok ? res.json() : Promise.reject({
         error: res.status,
@@ -7,15 +5,17 @@ const parseResponse = (res, message = '') => {
     })
 }
 
-const getTodos = () => {
-    return fetch(`${api}`, {
-        method: 'GET',
+
+const loginRequest = (body) => {
+    return fetch('https://norma.nomoreparties.space/api/auth/login', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
+        body: JSON.stringify(body)
     })
         .then(parseResponse)
 }
 
 
-export { getTodos }
+export { loginRequest }

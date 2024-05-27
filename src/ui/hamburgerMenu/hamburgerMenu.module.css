@@ -1,0 +1,9 @@
+.hamburgerButton {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.vectorIcon:hover {
+    filter: drop-shadow(0 0 10px #44B1EF);
+}

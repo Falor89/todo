@@ -1,0 +1,14 @@
+.todoItem {
+    padding: 20px;
+    width: 240px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.title {
+    width: 142px;
+}

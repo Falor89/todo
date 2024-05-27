@@ -1,0 +1,44 @@
+.groupConstructor {
+    max-width: 856px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: scroll;
+}
+
+
+
+.groupContainer {
+    display: flex;
+}
+
+.btnAddGroup {
+    width: 122px;
+    height: 17px;
+    border: none;
+    background-color: #F8FAFF;
+    cursor: pointer;
+    color: #44B1EF;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 18px;
+}
+
+.groupTodo {
+    display: flex;
+    flex-direction: column;
+}
+
+.groupTitle {
+    width: 260px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+}
+
+.listItems {
+    padding: 6px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
