@@ -16,11 +16,11 @@ export const DeleteButton = ({ id, todoId }) => {
             onClick={() => onDelete(id, todoId)}
             type='button'
         >
-            <img
+            {/* <img
                 className={styles.deleteIcon}
                 src={deleteIcon}
                 alt="TrashIcon"
-            />
+            /> */}
         </button>
     )
 }

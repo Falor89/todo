@@ -1,22 +1,30 @@
+import { useState } from 'react'
 import styles from './hamburgerMenu.module.css'
-import vectorIcon from '../../images/vector.png'
 
-export const HamburgerMenu = ({ id, todoId, onChange }) => {
+export const HamburgerMenu = ({ id, todoId, onChange, type }) => {
 
-    const onClick = () => {
-        console.log('На кнопку меню кликнули!!!' + `${id} and ${todoId}`)
+    const changeClass = (type) => {
+        switch (type) {
+            case 'todo': {
+                return `${styles.hamburgerButtonTodo}`
+            }
+                break;
+            case 'task': {
+                return `${styles.hamburgerButtonTask}`
+            }
+                break;
+            default: {
+                return `${styles.hamburgerButtonTask}`
+            }
+
+        }
     }
     return (
         <button
-            className={styles.hamburgerButton}
+            className={changeClass(type)}
             type='button'
-            onClick={() => onChange()}
+            onClick={() => onChange(type)}
         >
-            <img
-                className={styles.vectorIcon}
-                src={vectorIcon}
-                alt="VectorIcon"
-            />
         </button>
     )
 }

@@ -9,10 +9,10 @@ export const AddButton = ({ click, todoId }) => {
             className={styles.btnAdd}
             type='button'
         >
-            <img
+            {/* <img
                 className={styles.addIcon}
                 src={addIcon}
-                alt='Кнопка добавления' />
+                alt='Кнопка добавления' /> */}
         </button>
     )
 }

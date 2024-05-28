@@ -41,6 +41,7 @@ export const TodoItem = ({ todo, onChange, todoId }) => {
                 onChange={onClick}
                 id={todo._id}
                 todoId={todoId}
+                type='task'
             />
         </li>
     )

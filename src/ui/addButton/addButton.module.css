@@ -1,11 +1,15 @@
 .btnAdd {
     border: none;
-    background-color: #F8FAFF;
+    width: 36px;
+    height: 32px;
+    background-image: url(../../images/addButtonStatic.svg);
     cursor: pointer;
     margin: 0;
     padding: 0;
+    transition: all .5s ease;
 }
 
-.addIcon {
-    filter: drop-shadow(0 0 10px #44B1EF);
+.btnAdd:hover {
+    background-image: url(../../images/addButtonHover.svg);
+    transition: all .2s ease;
 }

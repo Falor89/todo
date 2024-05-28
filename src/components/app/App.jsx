@@ -5,7 +5,7 @@ import Modal from '../Modal/Modal';
 import { routes } from '../../utils/routes';
 
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router';
 import { HomePage } from '../../pages/home';
 import { LoginPage } from '../../pages/login';
@@ -15,6 +15,9 @@ import { ProtectedRoute } from '../Protected/Protected';
 
 function App() {
   const dispatch = useDispatch()
+  const { groupTodos } = useSelector(store => store.todos)
+
+
 
   return (
     <div className={styles.app}>

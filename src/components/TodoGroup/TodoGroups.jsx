@@ -1,6 +1,6 @@
 import styles from './todoGroups.module.css'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { addNewGroup, addNewGroupTask, deleteTodo, toggleGroupTask } from "../../services/actions/todos"
 import { Check } from '../../ui/checkbox/checkB'
@@ -39,7 +39,9 @@ export const TodoGroup = () => {
                         >
                             <div className={styles.groupTitle}>
                                 <TaskInput value={todo.title} type='' />
-                                <HamburgerMenu />
+                                <HamburgerMenu
+                                    type='todo'
+                                />
                                 <AddButton
                                     click={addTask}
                                     todoId={todo._id}

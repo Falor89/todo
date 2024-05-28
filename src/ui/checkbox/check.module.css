@@ -1,0 +1,27 @@
+.checkboxFalse {
+    cursor: pointer;
+    border: none;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../images/checkbox_false.svg);
+    transition: all .3s ease;
+}
+
+.checkboxTrue {
+    cursor: pointer;
+    border: none;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../images/checkbox_true.svg);
+    transition: all .3s ease;
+}
+
+.checkboxFalse:hover {
+    transition: all .3s ease;
+    background-image: url(../../images/checkboxHover_false.svg);
+}
+
+.checkboxTrue:hover {
+    transition: all .3s ease;
+    background-image: url(../../images/checkboxHover_true.svg);
+}

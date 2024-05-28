@@ -1,11 +1,27 @@
-.hamburgerButton {
+.hamburgerButtonTask {
     border: none;
-    background-color: #F8FAFF;
+    width: 14px;
+    height: 14px;
+    background-image: url(../../images/hamburger.svg);
     cursor: pointer;
-    margin: 0 12px 0 8px;
     padding: 0;
 }
 
-.vectorIcon:hover {
-    filter: drop-shadow(0 0 10px #44B1EF);
+.hamburgerButtonTodo {
+    composes: hamburgerButtonTask;
+    background-image: url(../../images/hamburgerTodo.svg);
+}
+
+.hamburgerButtonTask:hover {
+    width: 14px;
+    height: 14px;
+    background-image: url(../../images/hamburgerHover.svg);
+    transition: all .2s ease;
+}
+
+.hamburgerButtonTodo:hover {
+    width: 14px;
+    height: 14px;
+    background-image: url(../../images/hamburgerHover.svg);
+    transition: all .2s ease;
 }
