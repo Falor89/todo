@@ -1,14 +1,12 @@
 .groupConstructor {
-    max-width: 856px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow-x: scroll;
+    width: 856px;
+    display: flex;
 }
-
-
 
 .groupContainer {
     display: flex;
+    max-width: 734px;
+    overflow-x: scroll;
 }
 
 .btnAddGroup {
@@ -26,6 +24,8 @@
 .groupTodo {
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    padding: 6px;
 }
 
 .groupTitle {
@@ -36,7 +36,8 @@
 }
 
 .listItems {
-    padding: 6px;
+    margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 .main {
     padding: 20px 0 0 0;
     display: flex;
+    gap: 10px
 }
 
 
@@ -11,26 +12,9 @@
     align-items: center;
 }
 
-.title {
-    font-size: 40px;
-    font-family: 'Inter-SemiBold';
-    font-weight: 900;
-    width: 162px;
-    height: 48px;
-    text-align: center;
-    margin: 0;
-    padding: 70px 0 20px 0;
-}
 
 @media screen and (max-width: 550px) {
     .main {
         flex-direction: column;
     }
-}
-
-.todoList {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px
 }

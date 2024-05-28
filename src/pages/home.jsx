@@ -1,51 +1,30 @@
 import styles from './pages.module.css'
 
-
-import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { data } from '../utils/data'
-import { Check } from '../ui/checkbox/checkB'
-import { addNewGroup, toggleTodo } from '../services/actions/todos'
-import { TodoItem } from '../components/TodoItem/TodoItem'
+
 import { TodoGroup } from '../components/TodoGroup/TodoGroups'
+import { TodoData } from '../components/TodoData/TodoData'
 
 export const HomePage = () => {
     const dispatch = useDispatch()
-    const { todos, groupTodos } = useSelector(store => store.todos)
+    const { todos } = useSelector(store => store.todos)
 
-    const onChange = (id) => {
-        dispatch(toggleTodo(id))
-    }
+    const todosEmpty = todos.filter((todo) => todo.isComplited === false)
+    const todosDone = todos.filter((todo) => todo.isComplited === true)
+
 
     return (
         <section className={styles.main}>
-            {console.log(groupTodos)}
-            <ul className={styles.todoList}>
-                {
-                    todos.map((todo) => {
-                        if (todo.isComplited === false) {
-                            return <TodoItem
-                                todo={todo}
-                                onChange={onChange}
-                            />
-                        }
-                    })
-                }
-            </ul>
+            {console.log(todosDone)}
+            <TodoData
+                todos={todosEmpty}
+                inputType='close'
+            />
             <TodoGroup />
-            <ul className={styles.todoList}>
-
-                {
-                    todos.map((todo) => {
-                        if (todo.isComplited === true) {
-                            return <TodoItem
-                                todo={todo}
-                                onChange={onChange}
-                            />
-                        }
-                    })
-                }
-            </ul>
+            <TodoData
+                todos={todosDone}
+                inputType='done'
+            />
         </section >
     )
 }

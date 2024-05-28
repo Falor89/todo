@@ -37,19 +37,23 @@ export const LoginForm = () => {
             >
                 <input
                     className={styles.input}
-                    placeholder='Email'
+                    placeholder='Почта'
                     type="text"
                     {...register('email', {
-                        required: 'Email is require field!',
+                        required: 'Почта- обязательное поле',
+                        pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i,
+                            message: 'Введите корректную почту'
+                        }
                     })}
                 />
                 {errors?.email && (<span className={styles.errorMessage}>{errors.email.message}</span>)}
                 <input
                     className={styles.input}
-                    placeholder='Password'
+                    placeholder='Пароль'
                     type="password"
                     {...register('password', {
-                        required: 'Password is require field!',
+                        required: 'Пароль- обязательное поле',
                         minLength: {
                             value: 6,
                             message: 'The password must be more than 6 characters long'
@@ -59,8 +63,8 @@ export const LoginForm = () => {
                 {errors?.password && (<span className={styles.errorMessage}>{errors.password.message}</span>)}
             </fieldset>
             <div className={styles.btnContainer}>
-                <FormButton htmlType="submit" title='Login' />
-                <FormButton htmlType='button' title='Create Account' />
+                <FormButton htmlType="submit" title='Войти' />
+                <FormButton htmlType='button' title='Зарегистрироваться' />
             </div>
         </form>
     )

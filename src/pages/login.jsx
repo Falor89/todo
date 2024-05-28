@@ -18,7 +18,7 @@ export const LoginPage = () => {
 
     return (
         <section className={styles.login}>
-            <h2 className={styles.title}>SIGN UP</h2>
+            <h2 className={styles.title}>АВТОРИЗАЦИЯ</h2>
             <LoginForm />
         </section>
     )

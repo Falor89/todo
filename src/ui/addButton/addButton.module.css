@@ -1,7 +1,9 @@
 .btnAdd {
     border: none;
-    background-color: #fff;
+    background-color: #F8FAFF;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 
 .addIcon {

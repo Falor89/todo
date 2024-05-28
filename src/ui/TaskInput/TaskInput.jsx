@@ -1,15 +1,18 @@
+import { useForm } from 'react-hook-form'
 import styles from './takskInput.module.css'
 import { useState } from "react"
 
 export const TaskInput = ({ value, type }) => {
-    const [title, setTitle] = useState({ value })
 
-    const onChange = (e) => {
-        setTitle(e.target.value)
-    }
+    const { register, handleSubmit, formState: { error } } = useForm({
+        defaultValues: {
+            title: value,
+        },
+        mode: 'onSubmit'
+    })
 
-    const onSubmit = (e) => {
-        e.preventDefault()
+    const onSubmit = (data) => {
+        console.log(data)
     }
 
     const changeClass = (type) => {
@@ -28,12 +31,20 @@ export const TaskInput = ({ value, type }) => {
         }
     }
     return (
-        <>
-            <input
-                className={changeClass(type)}
-                value={title.value}
-                onChange={onChange}
-            />
-        </>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <fieldset className={styles.fieldset}>
+                <input
+                    className={changeClass(type)}
+                    {...register('title', {
+                        required: 'Поле не может быть пустым',
+                        minLength: {
+                            value: 1,
+                            message: 'Поле должно быть более 1 символа в длину!'
+                        }
+                    })}
+                />
+            </fieldset>
+        </form>
+
     )
 }
