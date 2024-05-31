@@ -1,0 +1,72 @@
+.groupConstructor {
+    width: 856px;
+    display: flex;
+    min-height: 350px;
+    box-sizing: border-box;
+    cursor: grab;
+}
+
+
+.groupContainer {
+    display: flex;
+    max-width: 734px;
+    overflow-x: scroll;
+}
+
+.btnAddGroup {
+    width: 122px;
+    height: 17px;
+    border: none;
+    background-color: #F8FAFF;
+    cursor: pointer;
+    color: #44B1EF;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 18px;
+}
+
+.groupTodo {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 6px;
+}
+
+.groupTitle {
+    width: 260px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+}
+
+.listItems {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+@media screen and (max-width: 1500px) {
+    .groupConstructor {
+        max-width: 640px
+    }
+
+    .groupContainer {
+        max-width: calc(300px + (734 - 300) * ((100vw - 320px) / (1500 - 320)));
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .groupConstructor {
+        max-width: 400px
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .groupConstructor {
+        max-width: 300px;
+    }
+}

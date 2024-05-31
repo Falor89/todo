@@ -16,9 +16,67 @@ const data = [
     {
         title: 'Learn JavaScript',
         text: 'Array, object',
+        isComplited: true,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
+        isComplited: false,
+        _id: uuidv4(),
+    },
+    {
+        title: 'Learn JavaScript',
+        text: 'Array, object',
         isComplited: false,
         _id: uuidv4(),
     },
 ]
 
-export default data;
+function getData() {
+    return data
+}
+
+export { getData, data }

@@ -1,0 +1,41 @@
+.popupHidden {
+    position: absolute;
+    visibility: hidden;
+    list-style: none;
+}
+
+.popupVis {
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    left: 225px;
+    visibility: visible;
+    background-color: #F8FAFF;
+    width: 140px;
+    height: 129px;
+    border-radius: 0 12px 12px 12px;
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #D4EBFC
+}
+
+.popupItems {
+    cursor: pointer;
+    font-weight: 400;
+    color: #27507F;
+    width: 100%;
+    height: 15px;
+    transition: all .2s ease;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.popupItems:hover {
+    transition: all .4s ease;
+
+    background-color: #EAF7FF;
+}

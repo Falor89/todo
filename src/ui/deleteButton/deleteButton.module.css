@@ -1,0 +1,13 @@
+.deleteBtn {
+    border: none;
+    background-image: url(../../images/delete1.svg);
+    background-color: #fff;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+}
+
+.deleteBtn:hover {
+    background-image: url(../../images/deleteHover.svg);
+    transition: all .2s ease;
+}

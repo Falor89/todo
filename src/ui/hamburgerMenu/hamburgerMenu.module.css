@@ -1,0 +1,27 @@
+.hamburgerButtonTask {
+    border: none;
+    width: 14px;
+    height: 14px;
+    background-image: url(../../images/hamburger.svg);
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburgerButtonTodo {
+    composes: hamburgerButtonTask;
+    background-image: url(../../images/hamburgerTodo.svg);
+}
+
+.hamburgerButtonTask:hover {
+    width: 14px;
+    height: 14px;
+    background-image: url(../../images/hamburgerHover.svg);
+    transition: all .2s ease;
+}
+
+.hamburgerButtonTodo:hover {
+    width: 14px;
+    height: 14px;
+    background-image: url(../../images/hamburgerHover.svg);
+    transition: all .2s ease;
+}
