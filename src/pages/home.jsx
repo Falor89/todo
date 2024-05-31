@@ -15,7 +15,6 @@ export const HomePage = () => {
 
     return (
         <section className={styles.main}>
-            {console.log(todosDone)}
             <TodoData
                 todos={todosEmpty}
                 inputType='close'
