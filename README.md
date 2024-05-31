@@ -23,4 +23,7 @@
 2. Добавить возможность добавления задач в стеш( во все задачи)
 
 
-#### Ссылка на проект: https://falor89.github.io/todo/
+###Выполнено по макету Веб-дизайнера Никиты Колодезнего (телеграм:https://t.me/PanKoloda)
+
+### Ссылка на проект: https://falor89.github.io/todo/
+### Ссылка на макет: https://www.figma.com/design/AVb8hEb6eX65UcK868GNI7/Проект-Макс?node-id=10-495&t=6sbQROw1glvX4U6K-0
