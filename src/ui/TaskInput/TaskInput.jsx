@@ -31,7 +31,9 @@ export const TaskInput = ({ value, type }) => {
         }
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form
+            className={styles.form}
+            onSubmit={handleSubmit(onSubmit)}>
             <fieldset className={styles.fieldset}>
                 <input
                     className={changeClass(type)}

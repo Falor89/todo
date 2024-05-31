@@ -1,6 +1,6 @@
 import styles from './todoGroups.module.css'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { addNewGroup, addNewGroupTask, deleteTodo, toggleGroupTask } from "../../services/actions/todos"
 import { Check } from '../../ui/checkbox/checkB'
@@ -8,10 +8,10 @@ import { TaskInput } from '../../ui/TaskInput/TaskInput'
 import { TodoItem } from '../TodoItem/TodoItem'
 import { HamburgerMenu } from '../../ui/hamburgerMenu/hamburgerMenu'
 import { AddButton } from '../../ui/addButton/addButton'
+import ScrollContainer from 'react-indiana-drag-scroll'
 
 export const TodoGroup = () => {
     const dispatch = useDispatch()
-    const [rename, setRename] = useState(false)
     const { groupTodos } = useSelector(store => store.todos)
 
 
@@ -27,10 +27,11 @@ export const TodoGroup = () => {
         dispatch(addNewGroupTask(id))
     }
 
+
     return (
-        <div className={styles.groupConstructor} >
+        <div className={styles.groupConstructor} id='todoItem'>
             {console.log(groupTodos)}
-            <div className={styles.groupContainer}>
+            <ScrollContainer className={styles.groupContainer}>
                 {
                     groupTodos.map((todo) => (
                         <div
@@ -54,6 +55,7 @@ export const TodoGroup = () => {
                                             todo={item}
                                             onChange={onChange}
                                             todoId={todo._id}
+                                            key={item._id}
                                         />
                                     ))
                                 }
@@ -61,7 +63,7 @@ export const TodoGroup = () => {
                         </div>
                     ))
                 }
-            </div>
+            </ScrollContainer>
             <button
                 className={styles.btnAddGroup}
                 onClick={() => addGroup()}

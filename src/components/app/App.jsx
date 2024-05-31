@@ -11,6 +11,7 @@ import { HomePage } from '../../pages/home';
 import { LoginPage } from '../../pages/login';
 import { MyListPage } from '../../pages/myList'
 import { ProtectedRoute } from '../Protected/Protected';
+import { AppFooter } from '../AppFooter/AppFooter';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path={routes.myList} element={<ProtectedRoute element={<MyListPage />} />} />
         <Route path={routes.login} element={<LoginPage />} />
       </Routes>
+      <AppFooter />
     </div>
   );
 }

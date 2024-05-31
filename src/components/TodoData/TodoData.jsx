@@ -20,6 +20,7 @@ export const TodoData = ({ todos, inputType }) => {
                         <TodoItem
                             todo={todo}
                             onChange={onChange}
+                            key={todo._id}
                         />
                     )
                     )

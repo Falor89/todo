@@ -23,7 +23,7 @@ export const HamburgerMenu = ({ id, todoId, onChange, type }) => {
         <button
             className={changeClass(type)}
             type='button'
-            onClick={() => onChange(type)}
+            onClick={() => onChange()}
         >
         </button>
     )

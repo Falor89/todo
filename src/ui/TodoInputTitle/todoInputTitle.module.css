@@ -1,10 +1,12 @@
 .titleChangeInput {
-    width: 142px;
     border: none;
     background-color: #fff;
 }
 
-.form {}
+.form {
+    max-width: 142px;
+}
+
 
 .fieldset {
     border: none;
@@ -15,4 +17,10 @@
 .titleChangeInput:hover {
     background-color: #EAF7FF;
     transition: all .5s ease
+}
+
+@media screen and (max-width: 1399px) {
+    form {
+        max-width: calc(100px + (142 - 100) * ((100vw - 320px) / (1399 - 320)));
+    }
 }

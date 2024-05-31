@@ -19,6 +19,7 @@ export const TodoInputTitle = ({ todo, todoId, disabled, change }) => {
 
     return (
         <form
+            className={styles.form}
             onSubmit={handleSubmit(onSubmit)}>
             <fieldset
                 className={styles.fieldset}

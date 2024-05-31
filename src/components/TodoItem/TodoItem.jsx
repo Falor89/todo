@@ -4,19 +4,25 @@ import { DeleteButton } from '../../ui/deleteButton/deleteButton'
 import { HamburgerMenu } from '../../ui/hamburgerMenu/hamburgerMenu'
 import { TodoInputTitle } from '../../ui/TodoInputTitle/TodoInputTitle'
 import { useState } from 'react'
+import { PopupMini } from '../PopupMini/PopupMini'
 
 export const TodoItem = ({ todo, onChange, todoId }) => {
+    const [popupState, setPopupState] = useState(false)
     const [name, setName] = useState({
         type: true,
         id: todo._id,
         todoId: todoId
     })
-    const onClick = () => {
+    const changeTitle = () => {
         setName({
             type: !name.type
         })
-        console.log(name)
+        //console.log(name)
     }
+    const openPopup = () => {
+        setPopupState(!popupState)
+    }
+
     return (
         <li
             className={styles.todoItem}
@@ -32,16 +38,20 @@ export const TodoItem = ({ todo, onChange, todoId }) => {
                 todo={todo}
                 todoId={todoId}
                 disabled={name.type}
-                change={onClick} />
+                change={changeTitle} />
             <DeleteButton
                 id={todo._id}
                 todoId={todoId}
             />
             <HamburgerMenu
-                onChange={onClick}
+                onChange={openPopup}
                 id={todo._id}
                 todoId={todoId}
                 type='task'
+            />
+            <PopupMini
+                state={popupState}
+                changeName={changeTitle}
             />
         </li>
     )

@@ -1,15 +1,15 @@
 .todoItem {
     padding: 20px;
-    width: 240px;
+    max-width: 240px;
     height: 7px;
     background-color: #fff;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    gap: 8px
+    gap: 8px;
+    position: relative;
 }
 
-
 .title {
-    width: 142px;
+    max-width: 142px;
 }

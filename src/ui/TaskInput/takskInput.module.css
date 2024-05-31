@@ -1,5 +1,5 @@
 .taskInput {
-    width: 198px;
+
     height: 34px;
     border: none;
     font-family: 'Inter';
@@ -10,7 +10,7 @@
 }
 
 .taskInputClose {
-    width: 198px;
+    width: 100%;
     height: 34px;
     border: none;
     font-family: 'Inter';
@@ -21,7 +21,7 @@
 }
 
 .taskInputDone {
-    width: 198px;
+    width: 100%;
     height: 34px;
     border: none;
     font-family: 'Inter';
@@ -39,4 +39,8 @@ input {
     border: none;
     padding: 0;
     margin: 0;
+}
+
+.form {
+    max-width: 198px;
 }
