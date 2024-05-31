@@ -63,7 +63,7 @@ const AppHeader = () => {
                         className={activeTab.home ? styles.activeTab : styles.listItem}
                     >
                         <Link
-                            to='/'
+                            to={routes.home}
                             className={styles.link}
                         >
                             Все задачи

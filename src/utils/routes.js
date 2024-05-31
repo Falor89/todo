@@ -1,5 +1,5 @@
 export const routes = {
-    home: '/',
-    myList: '/myList',
-    login: '/login'
+    home: 'https://falor89.github.io/todo/',
+    myList: 'https://falor89.github.io/todo/myList',
+    login: 'https://falor89.github.io/todo/login'
 }
