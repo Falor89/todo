@@ -3,12 +3,13 @@
     background-color: #44B1EF;
     border-radius: 20px 20px 0 0;
     color: #F8FAFF;
+    justify-self: flex-end;
 }
 
 .nav {
     margin: 0 auto;
     display: flex;
-    padding: 50px 10px 20px 100px;
+    padding: 50px 10px 9px 100px;
 }
 
 .description {
