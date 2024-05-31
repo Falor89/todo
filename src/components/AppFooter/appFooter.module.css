@@ -9,7 +9,8 @@
 .nav {
     margin: 0 auto;
     display: flex;
-    padding: 50px 10px 9px 100px;
+    justify-content: center;
+    padding: 50px 10px 9px 10px;
 }
 
 .description {
@@ -68,7 +69,7 @@
     color: #fff;
     border-radius: 40px;
     border: 1px solid #fff;
-    padding: 10px 6px 10px 6px;
+    padding: 6px 10px;
     text-align: center;
     transition: all .4s ease;
 }
@@ -94,10 +95,6 @@
 @media screen and (max-width: 1400px) {
     .description {
         padding-right: calc(0px + (292 - 0) * ((100vw - 320px) / (1400 - 320)))
-    }
-
-    .nav {
-        padding-left: calc(10px + (100 - 10) * ((100vw - 320px) / (1400 - 320)));
     }
 
     .contacts {
