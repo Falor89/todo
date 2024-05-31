@@ -12,11 +12,12 @@
 1. Методология БЭМ
 2. HTML5
 3. CSS3
-4. JavaScript: библиотека React
+4. JavaScript: библиотека React(React-Router)
+5. Redux, Redux-thunk
+6. REST-API
 
 **Планы по доработке проекта** 
 1. Добавить взаимодействие с Api
-2. Добавить redux
 
 
 #### Ссылка на проект: https://falor89.github.io/todo/
